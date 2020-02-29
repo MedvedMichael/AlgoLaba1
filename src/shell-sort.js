@@ -1,5 +1,5 @@
-const shell_sort = (inputArray) => {
-    let array = inputArray.slice()
+const shell_sort = async(inputArray) => {
+    let array = await inputArray.slice()
 
     numbers = getRowOnNumbersByTokuda(array.length)
     numbers.forEach(element => {

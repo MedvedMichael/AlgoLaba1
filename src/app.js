@@ -7,11 +7,10 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-rl.question("Input length: ", (length) => {
+rl.question("Input length: ", async (length) => {
     array = Array.from({ length }, () => Math.round(Math.random() * (length / 2)))
-
-    sortedArray = shell_sort(array)
     printArray(array)
+    sortedArray = await shell_sort(array)
     printArray(sortedArray)
 
     rl.close();
